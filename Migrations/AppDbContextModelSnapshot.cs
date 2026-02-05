@@ -25,6 +25,9 @@ namespace Infoscreen.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("ExtraInfo")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("FloorsInfo")
                         .HasColumnType("TEXT");
 
@@ -46,8 +49,8 @@ namespace Infoscreen.Migrations
                         {
                             Id = 1,
                             Address = "Källegatan 6-8",
-                            FloorsInfo = "Garage",
-                            Name = "PLAN 1"
+                            FloorsInfo = " Garage ",
+                            Name = "Plan 1"
                         });
                 });
 #pragma warning restore 612, 618
