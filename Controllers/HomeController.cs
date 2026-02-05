@@ -14,10 +14,19 @@ public class HomeController(AppDbContext appDb) : Controller
         var Location = appDb.Locations.FirstOrDefault(l => l.Id == id);
         return View(Location);
     }
-    public IActionResult Index()
-    {
+   public IActionResult Index(string q)
+{
+    if (string.IsNullOrEmpty(q))
         return View();
-    }
+
+    var location = appDb.Locations
+        .FirstOrDefault(l => l.Name.Contains(q) || l.Address.Contains(q));
+
+    if (location == null)
+        return View();
+
+    return RedirectToAction(nameof(Locations), new { id = location.Id });
+}
 
     public IActionResult Privacy()
     {
