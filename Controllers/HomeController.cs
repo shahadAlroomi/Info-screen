@@ -1,11 +1,19 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Infoscreen.Models;
+using Infoscreen.Data;
 
 namespace Infoscreen.Controllers;
 
-public class HomeController : Controller
+public class HomeController(AppDbContext appDb) : Controller 
 {
+
+
+    public IActionResult Location(int id )
+    {
+        var Location = appDb.Locations.FirstOrDefault(l => l.Id == id);
+        return View();
+    }
     public IActionResult Index()
     {
         return View();
