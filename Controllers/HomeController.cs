@@ -9,10 +9,10 @@ public class HomeController(AppDbContext appDb) : Controller
 {
 
 
-    public IActionResult Location(int id )
+    public IActionResult Locations(int id )
     {
         var Location = appDb.Locations.FirstOrDefault(l => l.Id == id);
-        return View();
+        return View(Location);
     }
     public IActionResult Index()
     {
