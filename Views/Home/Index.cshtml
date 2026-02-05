@@ -1,10 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Sök";
 }
-<h2>Search location</h2>
 
-<form method="get"action="=/Home/Loctions/1">
-<input type ="text" placeholder="Skriv adress eller byggnadsnamn"/>
- <button type="submit">OK</button>
+<h2>Sök byggnad</h2>
 
+<form asp-controller="Home" asp-action="Locations" method="get">
+    <input type="number" name="id" value="1" />
+    <button type="submit">OK</button>
 </form>
