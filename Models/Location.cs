@@ -10,6 +10,8 @@ public class Location ()
 
     public string? FloorsInfo {get;set;}
 
+    public string? ExtraInfo {get;set;}
+
     public string? LogoUrl {get;set;}
 
     public string? ImageUrl {get;set;}
