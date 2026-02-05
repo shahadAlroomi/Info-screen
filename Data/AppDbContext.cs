@@ -14,9 +14,9 @@ public class AppDbContext : DbContext
                 new Location
                 {
                     Id = 1,
-                    Name = "Main Office",
-                    Address = "Example Street 1",
-                    FloorsInfo = "PLAN 1\nCompany A\nCompany B",
+                    Name = "Plan 1",
+                    Address = "Källegatan 6-8",
+                    FloorsInfo = " Garage ",// "PLAN 1\n Garage A\nCompany B",
                 }
             );
         }

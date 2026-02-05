@@ -30,7 +30,7 @@ namespace Infoscreen.Migrations
             migrationBuilder.InsertData(
                 table: "Locations",
                 columns: new[] { "Id", "Address", "FloorsInfo", "ImageUrl", "LogoUrl", "Name" },
-                values: new object[] { 1, "Example Street 1", "PLAN 1\nCompany A\nCompany B", null, null, "Main Office" });
+                values: new object[] { 1, "Källegatan 6-8", "- Garage", null, null, "PLAN 1" });
         }
 
         /// <inheritdoc />

@@ -5,11 +5,11 @@ using Infoscreen.Data;
 
 namespace Infoscreen.Controllers;
 
-public class HomeController(AppDbContext appDb) : Controller 
+public class HomeController(AppDbContext appDb) : Controller
 {
 
 
-    public IActionResult Locations(int id )
+    public IActionResult Locations(int id)
     {
         var Location = appDb.Locations.FirstOrDefault(l => l.Id == id);
         return View(Location);
@@ -29,4 +29,17 @@ public class HomeController(AppDbContext appDb) : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+    [HttpPost]
+    [Route("api/locations")]
+
+    public IActionResult CreateLocation([FromBody] Location location)
+    {
+        appDb.Locations.Add(location);
+        appDb.SaveChanges();
+
+        return Ok(location);
+    }
+
 }
+

@@ -45,9 +45,9 @@ namespace Infoscreen.Migrations
                         new
                         {
                             Id = 1,
-                            Address = "Example Street 1",
-                            FloorsInfo = "PLAN 1\nCompany A\nCompany B",
-                            Name = "Main Office"
+                            Address = "Källegatan 6-8",
+                            FloorsInfo = "Garage",
+                            Name = "PLAN 1"
                         });
                 });
 #pragma warning restore 612, 618
